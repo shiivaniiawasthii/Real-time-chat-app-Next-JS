@@ -1,10 +1,11 @@
+import SideBar from '@/components/ui/shared/SideBar'
 import React from 'react'
 
 type Props = React.PropsWithChildren<{}>
 
  const layout = ({ children }: Props) => {
   return (
-    <div>{children}</div>
+    <SideBar>{children}</SideBar>
   )
 }
 export default layout
