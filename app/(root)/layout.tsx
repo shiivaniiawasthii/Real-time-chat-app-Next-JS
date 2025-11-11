@@ -1,14 +1,12 @@
+import SideBar from '@/components/ui/shared/SideBarWrapper';
 import React from 'react'
 
-type Props = {
-  children: React.PropsWithChildren<{}>;
-}
+type Props =  React.PropsWithChildren<{}>;
+
 
 const Layout  = ({children} : Props) => {
   return (
-    <>
-      {children}
-    </>
+    <SideBar>{children}</SideBar>
   )
 }
     
