@@ -1,5 +1,6 @@
 "use client";
 
+import { useConversation } from "@/app/hooks/useConversation";
 import { useNavigation } from "@/app/hooks/useNavigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -14,6 +15,10 @@ import React from "react";
 
 function MobileNav() {
   const paths = useNavigation();
+
+ const { isActive } =  useConversation()
+
+if(isActive) return null
 
   return (
     <Card
