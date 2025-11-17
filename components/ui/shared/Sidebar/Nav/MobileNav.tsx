@@ -12,6 +12,7 @@ import {
 import { UserButton } from "@clerk/clerk-react";
 import Link from "next/link"; // ✅ Correct import
 import React from "react";
+import { ModeToggle } from "../../ThemeToggleButton/page";
 
 function MobileNav() {
   const paths = useNavigation();
@@ -51,6 +52,8 @@ if(isActive) return null
               </li>
             );
           })}
+<li>         <ModeToggle />
+</li>
 <li>         <UserButton />
 </li>
         </ul>
