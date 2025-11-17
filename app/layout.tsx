@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ConvexClientProvider from "@/providers/ConvexClientProvider";
 import { Tooltip } from "@/components/ui/tooltip";
+import { ThemeProvider } from "@/providers/themeProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +30,17 @@ export default function RootLayout({
 cz-shortcut-listen="true"
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ConvexClientProvider><Tooltip>{children}</Tooltip></ConvexClientProvider>
+        <ConvexClientProvider>
+<ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          {children}
+            
+          </ThemeProvider>
+<Tooltip></Tooltip></ConvexClientProvider>
       </body>
     </html>
   );

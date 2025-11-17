@@ -11,6 +11,7 @@ import {
 import { UserButton } from "@clerk/clerk-react";
 import Link from "next/link"; // ✅ Correct import
 import React from "react";
+import { ModeToggle } from "../../ThemeToggleButton/page";
 
 function DesktopNav() {
   const paths = useNavigation();
@@ -51,7 +52,9 @@ function DesktopNav() {
         </ul>
       </nav>
 
+
       <div className="flex flex-col items-center gap-4">
+<ModeToggle />
         <UserButton />
       </div>
     </Card>
